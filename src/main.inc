@@ -1,0 +1,64 @@
+extrn OnGameModeInit
+extrn OnGameModeExit
+extrn OnPlayerConnect
+extrn OnPlayerDisconnect
+extrn OnPlayerSpawn
+extrn OnPlayerDeath
+extrn OnVehicleSpawn
+extrn OnVehicleDeath
+extrn OnPlayerText
+extrn OnPlayerCommandText
+extrn OnPlayerRequestClass
+extrn OnPlayerRequestSpawn
+extrn OnPlayerEnterVehicle
+extrn OnPlayerExitVehicle
+extrn OnPlayerStateChange
+extrn OnPlayerInteriorChange
+extrn OnPlayerEnterCheckpoint
+extrn OnPlayerLeaveCheckpoint
+extrn OnPlayerEnterRaceCheckpoint
+extrn OnPlayerLeaveRaceCheckpoint
+extrn OnPlayerKeyStateChange
+extrn OnRconCommand
+extrn OnObjectMoved
+extrn OnPlayerObjectMoved
+extrn OnPlayerPickUpPickup
+extrn OnPlayerExitedMenu
+extrn OnPlayerSelectedMenuRow
+extrn OnVehicleRespray
+extrn OnVehicleMod
+extrn OnEnterExitModShop
+extrn OnVehiclePaintjob
+extrn OnScriptCash
+extrn OnRconLoginAttempt
+extrn OnPlayerUpdate
+extrn OnPlayerStreamIn
+extrn OnPlayerStreamOut
+extrn OnVehicleStreamIn
+extrn OnVehicleStreamOut
+extrn OnActorStreamIn
+extrn OnActorStreamOut
+extrn OnDialogResponse
+extrn OnPlayerClickPlayer
+extrn OnPlayerTakeDamage
+extrn OnPlayerGiveDamage
+extrn OnPlayerGiveDamageActor
+extrn OnVehicleDamageStatusUpdate
+extrn OnUnoccupiedVehicleUpdate
+extrn OnPlayerClickMap
+extrn OnPlayerEditAttachedObject
+extrn OnPlayerEditObject
+extrn OnPlayerSelectObject
+extrn OnPlayerClickTextDraw
+extrn OnPlayerClickPlayerTextDraw
+extrn OnPlayerWeaponShot
+extrn OnIncomingConnection
+extrn OnTrailerUpdate
+extrn OnVehicleSirenStateChange
+
+if target_system eq windows
+	extrn '__imp__VirtualProtect@16' as VirtualProtect:dword
+	MAX_VAL = 07FFFFFFFh
+else if target_system eq linux
+	MAX_VAL = 0FFFFFFFFh
+end if
